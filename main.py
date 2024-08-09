@@ -12,14 +12,14 @@ from PIL import Image
 
 from fcns import get_resize_dims
 
-# parser = argparse.ArgumentParser("Parameter file location")
-# parser.add_argument(
-#     "params", 
-#     help="Location of the parameter file for processing the video", type=str,
-#     nargs='?', default="params.yaml")
-# args = parser.parse_args()
-# PARAMS_FILE = args.params
-PARAMS_FILE = "params.yaml"
+parser = argparse.ArgumentParser("Parameter file location")
+parser.add_argument(
+    "params", 
+    help="Location of the parameter file for processing the video", type=str,
+    nargs='?', default="params.yaml")
+args = parser.parse_args()
+PARAMS_FILE = args.params
+# PARAMS_FILE = "params.yaml"
 
 with open(PARAMS_FILE, 'r') as file:
     params = yaml.safe_load(file)
