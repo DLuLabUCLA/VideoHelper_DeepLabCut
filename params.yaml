@@ -1,12 +1,15 @@
 root: ./example_dlc
 out_folder: resized
 
-downsample: False
+downsample: True
 upsample: False
+
+video: True
+labeled-data: True
 
 target_width: 1200
 target_height: null
 
-skip_if_video_exists: True
+skip_if_video_exists: False
 
 
