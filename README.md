@@ -1,6 +1,11 @@
 # VideoHelper_DeepLabCut
 Video processing helper for DeepLabCut
 
+In terminal, install required packages using 
+
+```
+pip install -r requirements.txt
+```
 
 to run, type in terminal:
 
