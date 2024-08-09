@@ -7,7 +7,7 @@ In terminal, install required packages using
 pip install -r requirements.txt
 ```
 
-to run, type in terminal:
+to run, type in terminal (in the package folder):
 
 ```
 python3 main.py params.yaml
