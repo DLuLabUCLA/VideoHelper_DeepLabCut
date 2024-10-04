@@ -1,29 +1,29 @@
 # location of the DeepLabCut project folder
 # can be either relative path or absolute path
 root: example_dlc
-# where the output is going to be stored
+# where the output is going to be stored, relative to the root
 out_folder: resized
 
-# if we are doing downsample or upsample
+# if performing downsample or upsample
 # if both are true, videos/images are scaled to the same size
 # if both are false, no operation will be done
-# if downsample only, videos/images larger than the target will be downsampled, others unchanged
-# if upsample only, videos/images smaller than the target will be upsampled, others unchanged
+# if downsample true only, videos/images larger than the target will be downsampled, others unchanged
+# if upsample true only, videos/images smaller than the target will be upsampled, others unchanged
 downsample: True
 upsample: False
 
-# if we are processing the videos
+# if we are processing the video files in the `videos` folder
 video: True
-# and files in labeled-data
+# and files in `labeled-data`
 labeled-data: True
 
 # the target resolution, at least one should be specified, and the unspecified should be 'null'
 # if only one is specified, videos/images will be scaled proportionately
-# if both values are specified, videos/images will be force to scale
+# if both values are specified, videos/images will be forced to scale to inputted pixel
 target_width: 1200
 target_height: null
 
-# (since video processing takes time) skip if video already exists in target folder
+# (since video processing takes time) skip if video already exists in out_folder
 skip_if_video_exists: False
 
 
