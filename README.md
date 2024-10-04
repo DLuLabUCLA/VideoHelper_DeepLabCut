@@ -1,5 +1,5 @@
 # VideoHelper_DeepLabCut
-Video processing helper for DeepLabCut
+Video processing helper for DeepLabCut, video examples downloaded from https://github.com/MaureenAscona/DLC-MotorBox/tree/main
 
 In terminal, install required packages using 
 
