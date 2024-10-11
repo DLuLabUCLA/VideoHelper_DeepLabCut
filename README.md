@@ -7,15 +7,16 @@ In terminal, install required packages using
 pip install -r requirements.txt
 ```
 
+## Resizing Function
 to run, type in terminal (in the package folder):
 
 ```
-python3 main.py params.yaml
+python3 resize.py resize_params.yaml
 ```
 
-change `params.yaml` to the parameter file location
+change `resize_params.yaml` to the parameter file location
 
-example `params.yaml` file:
+example `resize_params.yaml` file:
 
 ```
 root: ./example_dlc
@@ -33,4 +34,18 @@ target_height: null
 skip_if_video_exists: False
 ```
 
-As of 08/09/2024, make sure to include all above parameters in the yaml file, since there are no default values set in the code
+## Changing labels made by multi-animal project to single animal labels
+
+to run, type in terminal (in the package folder):
+
+```
+python3 labels_multi2single.py multi2single_params.yaml
+```
+
+`multi2single_params.yaml` only contains the root folder and output folder name
+
+## Other notes
+
+As of 10/10/2024, make sure to include all above parameters in the yaml file, since there are no default values set in the code
+
+
