@@ -166,7 +166,7 @@ for i, fd in enumerate(labeled_folders):
             df[col] = df[col] * scale_height
     save_folder = os.path.join(out_label, vid_name_noext)
     os.makedirs(save_folder, exist_ok=True)
-    df.to_hdf(os.path.join(save_folder, f"{filename}.h5"), key='df')
+    df.to_hdf(os.path.join(save_folder, f"{filename}.h5"), key='keypoints', mode='w')
     df.to_csv(os.path.join(save_folder, f"{filename}.csv"))
 
     for img_path in tqdm.tqdm(images):

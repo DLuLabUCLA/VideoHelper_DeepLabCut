@@ -46,6 +46,8 @@ python3 labels_multi2single.py multi2single_params.yaml
 
 ## Other notes
 
-As of 10/10/2024, make sure to include all above parameters in the yaml file, since there are no default values set in the code
+All h5 files are stored with key "keypoints" using code `pandas.DataFrame.to_hdf(*, key='keypoints', mode='w')`, which overwrites the original key in hdf file and replace with "keypoints"
+
+As of 10/10/2024, for each task, make sure to include all above parameters in the yaml file, since there are no default values set in the code
 
 
