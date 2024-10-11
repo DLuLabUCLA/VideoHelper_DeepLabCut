@@ -34,7 +34,10 @@ labeled_folders = [
 for i, fd in tqdm.tqdm(enumerate(labeled_folders)):
     h5_filename = glob.glob(os.path.join(fd, "CollectedData_*.h5"))[0]
     df = pd.read_hdf(h5_filename)
-    df.columns = df.columns.droplevel(1)
+    if df.columns.nlevels > 3:
+        df.columns = df.columns.droplevel(1)
+    else:
+        continue
 
     relative_path = os.path.relpath(h5_filename, root)
     os.makedirs(os.path.join(out_root, os.path.dirname(relative_path)), exist_ok=True)
