@@ -16,7 +16,7 @@ parser = argparse.ArgumentParser("Parameter file location")
 parser.add_argument(
     "params", 
     help="Location of the parameter file for processing the video", type=str,
-    nargs='?', default="params.yaml")
+    nargs='?', default="resize_params.yaml")
 args = parser.parse_args()
 PARAMS_FILE = args.params
 # PARAMS_FILE = "params.yaml"

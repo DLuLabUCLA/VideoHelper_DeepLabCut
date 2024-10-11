@@ -1,0 +1,5 @@
+# location of the DeepLabCut project folder
+# can be either relative path or absolute path
+root: example_dlc
+# where the output is going to be stored, relative to the root
+out_folder: multi2single
