@@ -1,5 +1,6 @@
 .DS_Store
-example_dlc/
+example_dlc/resized
+example_dlc/multi2single
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
