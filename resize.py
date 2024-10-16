@@ -30,6 +30,7 @@ root, downsample, upsample, target_width, target_height, ftype, process_labeled 
     params["root"], params["downsample"], params["upsample"], \
     params["target_width"], params["target_height"], params["filetype"], \
     params["labeled-data"]
+exceptions = list(params["exceptions"])
 if "DRYRUN" in params.keys():
     DRYRUN = params["DRYRUN"]
 skip_if_video_exists = params["skip_if_video_exists"]
@@ -42,7 +43,7 @@ out_root = params["out_folder"]
 out_video = os.path.join(out_root, "videos")
 os.makedirs(out_video, exist_ok=True)
 
-
+# print(exceptions)
 scale_df_vid = pd.DataFrame()
 
 videos = [
@@ -50,6 +51,10 @@ videos = [
 
 for i,v in enumerate(videos):
     vid_name = os.path.basename(v)
+    # print(vid_name)
+    if vid_name in exceptions:
+        print(f"({i+1}/{len(videos)}) Skipped {vid_name} as it is in exception")
+        continue
     print(f"({i+1}/{len(videos)}) Processing video {vid_name}")
     cap = cv2.VideoCapture(v)
     if not cap.isOpened():

@@ -9,7 +9,7 @@ root: example_dlc
 video_folder: example_dlc/videos
 # location of the labeled data folder, not necessary if labeled-data : False (below)
 labeled_data_folder: example_dlc/labeled-data
-# where the output is going to be stored, relative to the root
+# where the output is going to be stored
 out_folder: example_dlc/resized
 
 # if performing downsample or upsample
@@ -23,17 +23,20 @@ upsample: False
 # if we are processing the video files in the `videos` folder
 video: True
 # and files in `labeled-data`
-labeled-data: True
+labeled-data: False
 # file type of videos, without "."
 filetype: MP4
 
 # the target resolution, at least one should be specified, and the unspecified should be 'null'
 # if only one is specified, videos/images will be scaled proportionately
 # if both values are specified, videos/images will be forced to scale to inputted pixel
-target_width: 1200
+target_width: 640
 target_height: null
 
 # (since video processing takes time) skip if video already exists in out_folder
-skip_if_video_exists: False
+skip_if_video_exists: True
+
+# add exceptions when processing video
+exceptions: ["MVI_0287.MP4", "some_video.MP4"]
 
 
