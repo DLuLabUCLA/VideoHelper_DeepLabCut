@@ -26,8 +26,8 @@ PARAMS_FILE = args.params
 with open(PARAMS_FILE, 'r') as file:
     params = yaml.safe_load(file)
 
-root, downsample, upsample, target_width, target_height, ftype, process_labeled = \
-    params["root"], params["downsample"], params["upsample"], \
+downsample, upsample, target_width, target_height, ftype, process_labeled = \
+    params["downsample"], params["upsample"], \
     params["target_width"], params["target_height"], params["filetype"], \
     params["labeled-data"]
 exceptions = list(params["exceptions"])
@@ -170,7 +170,8 @@ if process_labeled:
                 "resized_width": resized_width,
                 "resized_height": resized_height,
                 "scale_width": scale_width,
-                "scale_height": scale_height
+                "scale_height": scale_height,
+                # "video_from": os.path.abspath()
             }, index=[0])], ignore_index=True)
 
         df = pd.read_hdf(h5_filename)
